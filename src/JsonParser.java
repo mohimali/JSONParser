@@ -61,10 +61,7 @@ public class JsonParser {
             // Also validates json here, throws ParseException if invalid.
             JSONObject jsonOriginalObject = (JSONObject) jsonParser.parse(fileReader);
 
-
             JSONObject search = (JSONObject) jsonOriginalObject.get("Search");
-
-            // REMOVE LATER BECAUSE WE ARE GETTING IT FROM A FILE
             JSONArray vehicleList = (JSONArray) search.get("VehicleList");
 
             //Loop through each vehicle object saving it.
@@ -140,7 +137,7 @@ public class JsonParser {
             spec.append(" - " + getEnumFuelAirCon(sippArray[3]));
 
             // {Vehicle name} – {SIPP} – {Car type}–{ Car type/doors} –{Transmission} – {Fuel} – {Air con}
-            System.out.println((i + 1) + " \t" + spec.toString());
+            System.out.println((i + 1) + ".\t" + spec.toString());
 
         } // for
         System.out.println();
@@ -205,7 +202,7 @@ public class JsonParser {
             String string = currentRV.getName() + " - "
                     + currentRV.getScore() + " - " + currentRV.getRating()
                     + " - " + currentRV.getTotalScore();
-            System.out.println("" + (i + 1) + "\t" + string);
+            System.out.println("" + (i + 1) + ".\t" + string);
         } // for
 
         System.out.println();
